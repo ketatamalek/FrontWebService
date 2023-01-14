@@ -1,0 +1,17 @@
+<form  [formGroup]="form" (ngSubmit)="onsub()">
+    <div fxLayout="row" fxLayoutAlign="center" >
+      <h4 style="color:#73777B;font-size:30px;">Informations du niveau</h4>
+    </div>
+      <mat-form-field appearance="legacy">
+          <input matInput placeholder="Niveau" formControlName="niveau">
+      </mat-form-field>
+      <br>
+      <br><br><br><br>
+    <div fxLayout="row" fxLayoutAlign="center" >
+      <button mat-button color="primary"  routerLink="/niveaux" style="font-size:18px;"  >Annuler</button>
+      <button mat-button color="primary"  type="submit"  style="font-size:18px;">Valider</button>
+    </div>
+  
+  
+  </form>
+  

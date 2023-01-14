@@ -1,6 +1,6 @@
 
 <div fxLayout="row" fxLayoutAlign="center" >
-    <h4 style="color:#73777B;font-size:27px;">Liste des matieres</h4>
+    <h4 style="color:#73777B;font-size:27px;">Liste des niveaux</h4>
   </div>
   <mat-form-field appearance="standard">
     <mat-label>Filter</mat-label>
@@ -12,14 +12,11 @@
           <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> ID </th>
           <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
-      <ng-container matColumnDef="Nom">
-          <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;">  NOM  </th>
-          <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
-      </ng-container>
       <ng-container matColumnDef="Niveau">
-        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;">  NIVEAU  </th>
-        <td mat-cell *matCellDef="let element"> {{element.niveau.niveau}} </td>
-    </ng-container>
+          <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;">  NIVEAU  </th>
+          <td mat-cell *matCellDef="let element"> {{element.niveau}} </td>
+      </ng-container>
+
   
       <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> action </th>
@@ -37,7 +34,7 @@
   <br>
   <br>
   <div fxLayout="row" fxLayoutAlign="center" >
-    <button mat-button color="primary"  routerLink="/matieres/create" style="font-size:18px;" >Ajouter</button>
+    <button mat-button color="primary"  routerLink="/niveaux/create" style="font-size:18px;" >Ajouter</button>
   </div>
   
   

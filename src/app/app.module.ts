@@ -32,6 +32,8 @@ import { ListeGroupesComponent } from './liste-groupes/liste-groupes.component';
 import { GroupeFormComponent } from './groupe-form/groupe-form.component';
 import { DemandeTirageFormComponent } from './demande-tirage-form/demande-tirage-form.component';
 import { ListeDemandesTirageComponent } from './liste-demandes-tirage/liste-demandes-tirage.component';
+import { NiveauFormComponent } from './niveau-form/niveau-form.component';
+import { ListeNiveauxComponent } from './liste-niveaux/liste-niveaux.component';
 
 
 @NgModule({
@@ -55,6 +57,8 @@ import { ListeDemandesTirageComponent } from './liste-demandes-tirage/liste-dema
     GroupeFormComponent,
     DemandeTirageFormComponent,
     ListeDemandesTirageComponent,
+    NiveauFormComponent,
+    ListeNiveauxComponent,
 
   ],
   imports: [

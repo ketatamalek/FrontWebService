@@ -13,6 +13,15 @@
           <mat-hint>{{nbEtudiants.value.length}} / 2</mat-hint>
         </mat-form-field>
         <br>
+        <mat-form-field appearance="legacy">
+          <mat-label>Liste des niveaux </mat-label>
+          <mat-select [(ngModel)]="selectedValue" formControlName="niveau">
+              <mat-option *ngFor="let element of TabNiveau" [value]="element">
+                  {{element.niveau}}
+              </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <br> 
       <br><br><br><br>
     <div fxLayout="row" fxLayoutAlign="center" >
       <button mat-button color="primary"  routerLink="/groupes" style="font-size:18px;"  >Annuler</button>

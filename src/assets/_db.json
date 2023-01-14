@@ -27,7 +27,7 @@
         "id":"1",
         "nom":"Mathematiques",
         "niveau": {
-          "id": 1,
+          "id": "1",
           "niveau": "7 eme"
         }
       },
@@ -35,7 +35,7 @@
         "id":"2",
         "nom":"Informatique",
         "niveau" : {
-          "id": 1,
+          "id": "1",
           "niveau": "7 eme"
         }
       }
@@ -43,11 +43,11 @@
     ],
     "niveaux":[
       {
-        "id": 1,
+        "id": "1",
         "niveau": "7 eme"
       },
       {
-        "id": 2,
+        "id": "2",
         "niveau": "8 eme"
       }
     ],
@@ -57,7 +57,7 @@
         "nom":"A",
         "nbEtudiants":24,
         "niveau": {
-          "id": 1,
+          "id": "1",
           "niveau": "7 eme"
         }
       },
@@ -66,7 +66,7 @@
         "nom":"B",
         "nbEtudiants":21,
         "niveau":{
-          "id": 1,
+          "id": "1",
           "niveau": "7 eme"
         }
       },
@@ -75,7 +75,7 @@
         "nom":"C",
         "nbEtudiants":24,
         "niveau":{
-          "id": 1,
+          "id": "1",
           "niveau": "7 eme"
         }
       }
@@ -98,7 +98,7 @@
           "id":"1",
           "nom":"Mathematiques",
           "niveau":{
-            "id": 1,
+            "id": "1",
             "niveau": "7 eme"
           }
         },
@@ -107,7 +107,7 @@
           "nom":"A",
           "nbEtudiants":24,
           "niveau":{
-            "id": 1,
+            "id": "1",
             "niveau": "7 eme"
           }
         }

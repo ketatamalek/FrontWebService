@@ -22,7 +22,7 @@ export class ListeMatieresComponent implements OnInit {
   // remplir datasource a partir du tableaux du service
 
   dataSource:MatTableDataSource<Matiere>  ;//declaration
-  displayedColumns: string[] = ['Id', 'Nom','action'];
+  displayedColumns: string[] = ['Id', 'Nom','Niveau','action'];
 
   OnRemove(id:string):void{
     // 1. ouvrir la boite de dialogue

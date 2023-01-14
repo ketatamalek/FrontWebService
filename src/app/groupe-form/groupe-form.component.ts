@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Groupe } from 'src/models/Groupe';
+import { Niveau } from 'src/models/Niveau';
 import { Utilisateur } from 'src/models/Utilisateur';
 import { GroupeService } from '../services/groupe.service';
+import { NiveauService } from '../services/niveau.service';
 import { UtilisateurService } from '../services/utilisateur.service';
 
 @Component({
@@ -12,11 +14,14 @@ import { UtilisateurService } from '../services/utilisateur.service';
   styleUrls: ['./groupe-form.component.css']
 })
 export class GroupeFormComponent implements OnInit {
-   
+  TabNiveau:Niveau[]=[];
+  selectedValue='';
     form :any;
     currentItemId :string="";
     item1:any;
-    constructor(private MS: GroupeService,private router: Router , private activatedRoute :ActivatedRoute) { }
+    constructor(private MS: GroupeService,private US:NiveauService,private router: Router , private activatedRoute :ActivatedRoute) {
+      this.TabNiveau = this.US.tab;
+     }
   
     ngOnInit(): void
     {
@@ -33,6 +38,7 @@ export class GroupeFormComponent implements OnInit {
       this.form=new FormGroup({
         nom:new FormControl(item.nom,[Validators.required] ),
         nbEtudiants:new FormControl(item.nbEtudiants,[Validators.required]),
+        niveau:new FormControl(item.niveau,[Validators.required]),
       })
     }
   
@@ -41,6 +47,7 @@ export class GroupeFormComponent implements OnInit {
       this.form=new FormGroup({
         nom:new FormControl(null,[Validators.required] ),
         nbEtudiants:new FormControl(null,[Validators.required]),
+        niveau:new FormControl(null,[Validators.required]),
 
       })
     }

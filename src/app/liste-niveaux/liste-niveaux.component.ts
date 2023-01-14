@@ -1,27 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { Groupe } from 'src/models/Groupe';
+import { Matiere } from 'src/models/Matiere';
+import { Niveau } from 'src/models/Niveau';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
-import { GroupeService } from '../services/groupe.service';
+import { MatiereService } from '../services/matiere.service';
+import { NiveauService } from '../services/niveau.service';
 
 @Component({
-  selector: 'app-liste-groupes',
-  templateUrl: './liste-groupes.component.html',
-  styleUrls: ['./liste-groupes.component.css']
+  selector: 'app-liste-niveaux',
+  templateUrl: './liste-niveaux.component.html',
+  styleUrls: ['./liste-niveaux.component.css']
 })
-export class ListeGroupesComponent implements OnInit {
+export class ListeNiveauxComponent implements OnInit {
 
   ngOnInit(): void {}
   //etape1 : Injecter le service  dans le composant
-  constructor(private MS:GroupeService, private dialog:MatDialog)
+  constructor(private MS:NiveauService, private dialog:MatDialog)
   {
     this.dataSource=new MatTableDataSource(this.MS.tab);//instanciation
   }
   // remplir datasource a partir du tableaux du service
 
-  dataSource:MatTableDataSource<Groupe>  ;//declaration
-  displayedColumns: string[] = ['Id', 'Nom', 'NbEtudiants','Niveau','action'];
+  dataSource:MatTableDataSource<Niveau>  ;//declaration
+  displayedColumns: string[] = ['Id','Niveau','action'];
 
   OnRemove(id:string):void{
     // 1. ouvrir la boite de dialogue
@@ -33,14 +35,14 @@ export class ListeGroupesComponent implements OnInit {
     dialogRef.afterClosed().subscribe((isdeleted)=>{
    //3. tester le retour
     //4. if (retourne=confirm)=supression
-   if (isdeleted)this.MS.deleteGroupeByID(id).then(()=>this.fetch());
+   if (isdeleted)this.MS.deleteNiveauByID(id).then(()=>this.fetch());
     })
   //appeler une fonction dans le service qui va effacer la ligne a partire du tableaux tab du service
     //this.MS.deleteMemberByID(id).then(()=>{this.dataSource=this.MS.tab});//////
 
   }
   fetch():void {
-    this.MS.getAllGroupes().then((data)=>{this.dataSource.data=data})
+    this.MS.getAllNiveaux().then((data)=>{this.dataSource.data=data})
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
