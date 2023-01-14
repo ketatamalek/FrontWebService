@@ -1,0 +1,49 @@
+<form  [formGroup]="form" (ngSubmit)="onsub()">
+  <mat-card style="margin: 10px;">
+    <mat-card-header>
+      <mat-card-title>
+        Client information
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div fxLayout="row" fxLayoutAlign="space-between none">
+          <mat-form-field hintLabel="Max 8 characters" appearance="legacy" style="width: 45%">
+            <mat-label>CIN</mat-label>
+            <input matInput #input maxlength="8" placeholder="Ex. 12345678" formControlName="cin">
+            <mat-hint align="end">{{input.value.length}}/8</mat-hint>
+          </mat-form-field>
+        
+          <mat-form-field appearance="legacy" style="width: 45%">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Ex. Ketata" formControlName="nom">
+          </mat-form-field>
+        </div>
+        <br>
+        <br>
+      <div fxLayout="row" fxLayoutAlign="space-between none">
+        
+          <mat-form-field appearance="legacy" style="width: 45%">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="Ex. Malek" formControlName="prenom">
+          </mat-form-field>
+        
+        
+          <mat-form-field appearance="legacy" style="width: 45%">
+            <mat-label>Address</mat-label>
+              <input matInput placeholder="Ex. Sfax" formControlName="adresse">
+          </mat-form-field>
+        
+</div>
+      </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <div fxLayout="row" fxLayoutAlign="center" >
+        <button mat-button color="primary"  routerLink="/clients" style="font-size:18px;"  >Cancel</button>
+        <button mat-button color="primary"  type="submit"  style="font-size:18px;" [disabled]="!form.valid">Valid</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</form>
+  

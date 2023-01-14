@@ -1,0 +1,118 @@
+{
+    "utilisateurs" : [
+          {
+            "id":"1",
+            "username":"malekketata",
+            "password":"malek123",
+            "role":["Administrateur"],
+            "email" : "malek@gmail.com"
+          },
+          {
+            "id":"2",
+            "username":"hanaayedi",
+            "password":"hana123",
+            "role":["Enseignant"],
+            "email" : "hana@gmail.com"
+          },
+          {
+            "id":"3",
+            "username":"saharsamet",
+            "password":"sahar123",
+            "role":["Agent de tirage"],
+            "email" : "sahar@gmail.com"
+          }
+    ],
+    "matieres" : [
+      {
+        "id":"1",
+        "nom":"Mathematiques",
+        "niveau": {
+          "id": 1,
+          "niveau": "7 eme"
+        }
+      },
+      {
+        "id":"2",
+        "nom":"Informatique",
+        "niveau" : {
+          "id": 1,
+          "niveau": "7 eme"
+        }
+      }
+
+    ],
+    "niveaux":[
+      {
+        "id": 1,
+        "niveau": "7 eme"
+      },
+      {
+        "id": 2,
+        "niveau": "8 eme"
+      }
+    ],
+    "groupes":[
+      {
+        "id":"1",
+        "nom":"A",
+        "nbEtudiants":24,
+        "niveau": {
+          "id": 1,
+          "niveau": "7 eme"
+        }
+      },
+      {
+        "id":"2",
+        "nom":"B",
+        "nbEtudiants":21,
+        "niveau":{
+          "id": 1,
+          "niveau": "7 eme"
+        }
+      },
+      {
+        "id":"3",
+        "nom":"C",
+        "nbEtudiants":24,
+        "niveau":{
+          "id": 1,
+          "niveau": "7 eme"
+        }
+      }
+    ],
+    "demandes":[
+      {
+        "id":"1",
+        "date":"22/02/2022",
+        "heure":14,
+        "nbCopies":60,
+        "status":"en cours",
+        "enseignant":{
+          "id":"2",
+            "username":"hanaayedi",
+            "password":"hana123",
+            "role":["Enseignant"],
+            "email" : "hana@gmail.com"
+        },
+        "matiere": {
+          "id":"1",
+          "nom":"Mathematiques",
+          "niveau":{
+            "id": 1,
+            "niveau": "7 eme"
+          }
+        },
+        "groupe": {
+          "id":"1",
+          "nom":"A",
+          "nbEtudiants":24,
+          "niveau":{
+            "id": 1,
+            "niveau": "7 eme"
+          }
+        }
+      }
+    ]
+        
+
+}

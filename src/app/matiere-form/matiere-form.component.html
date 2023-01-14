@@ -1,0 +1,32 @@
+<form  [formGroup]="form" (ngSubmit)="onsub()">
+    <div fxLayout="row" fxLayoutAlign="center" >
+      <h4 style="color:#73777B;font-size:30px;">Informations du matiere</h4>
+    </div>
+      <mat-form-field appearance="legacy">
+          <input matInput placeholder="Nom" formControlName="nom">
+      </mat-form-field>
+      <br>
+        <!-- <mat-form-field appearance="legacy">
+        <mat-label>Coefficient</mat-label>
+          <input matInput #coefficient maxlength="2" placeholder="XX" formControlName="coefficient">
+          <mat-hint>{{coefficient.value.length}} / 2</mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="legacy">
+            <mat-label>Liste des enseignants </mat-label>
+            <mat-select [(ngModel)]="selectedValue" formControlName="enseignant">
+                <mat-option *ngFor="let element of TabEnseignant" [value]="element">
+                    {{element.username}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br> -->
+      <br><br><br><br>
+    <div fxLayout="row" fxLayoutAlign="center" >
+      <button mat-button color="primary"  routerLink="/matieres" style="font-size:18px;"  >Annuler</button>
+      <button mat-button color="primary"  type="submit"  style="font-size:18px;">Valider</button>
+    </div>
+  
+  
+  </form>
+  
