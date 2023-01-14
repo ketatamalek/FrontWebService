@@ -17,6 +17,8 @@ import { ListeDemandesTirageComponent } from './liste-demandes-tirage/liste-dema
 import { DemandeTirageFormComponent } from './demande-tirage-form/demande-tirage-form.component';
 import { ListeNiveauxComponent } from './liste-niveaux/liste-niveaux.component';
 import { NiveauFormComponent } from './niveau-form/niveau-form.component';
+import { ListeAffectationComponent } from './liste-affectation/liste-affectation.component';
+import { AffectationFormComponent } from './affectation-form/affectation-form.component';
 
 const routes: Routes = [
   {
@@ -78,6 +80,36 @@ const routes: Routes = [
     path : 'niveaux/:id/edit',
     pathMatch :'full',
     component: NiveauFormComponent,
+  },
+  {
+    path : 'matieres',
+    pathMatch :'full',
+    component: ListeMatieresComponent,
+  },
+  {
+    path : 'matieres/create',
+    pathMatch :'full',
+    component: MatiereFormComponent,
+  },
+  {
+    path : 'matieres/:id/edit',
+    pathMatch :'full',
+    component: MatiereFormComponent,
+  },
+  {
+    path : 'affectations',
+    pathMatch :'full',
+    component: ListeAffectationComponent,
+  },
+  {
+    path : 'affectations/create',
+    pathMatch :'full',
+    component: AffectationFormComponent,
+  },
+  {
+    path : 'affectations/:id/edit',
+    pathMatch :'full',
+    component: AffectationFormComponent,
   },
   {
     path : 'groupes',

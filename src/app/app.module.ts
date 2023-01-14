@@ -34,6 +34,8 @@ import { DemandeTirageFormComponent } from './demande-tirage-form/demande-tirage
 import { ListeDemandesTirageComponent } from './liste-demandes-tirage/liste-demandes-tirage.component';
 import { NiveauFormComponent } from './niveau-form/niveau-form.component';
 import { ListeNiveauxComponent } from './liste-niveaux/liste-niveaux.component';
+import { ListeAffectationComponent } from './liste-affectation/liste-affectation.component';
+import { AffectationFormComponent } from './affectation-form/affectation-form.component';
 
 
 @NgModule({
@@ -59,6 +61,8 @@ import { ListeNiveauxComponent } from './liste-niveaux/liste-niveaux.component';
     ListeDemandesTirageComponent,
     NiveauFormComponent,
     ListeNiveauxComponent,
+    ListeAffectationComponent,
+    AffectationFormComponent,
 
   ],
   imports: [

@@ -80,35 +80,65 @@
         }
       }
     ],
-    "demandes":[
+    "affectations":[
       {
         "id":"1",
-        "date":"22/02/2022",
-        "heure":14,
-        "nbCopies":60,
-        "status":"en cours",
-        "enseignant":{
-          "id":"2",
-            "username":"hanaayedi",
-            "password":"hana123",
-            "role":["Enseignant"],
-            "email" : "hana@gmail.com"
-        },
-        "matiere": {
+        "matiere" : {
           "id":"1",
           "nom":"Mathematiques",
-          "niveau":{
+          "niveau": {
             "id": "1",
             "niveau": "7 eme"
           }
         },
-        "groupe": {
+        "groupe":{
           "id":"1",
+        "nom":"A",
+        "nbEtudiants":24,
+        "niveau": {
+          "id": "1",
+          "niveau": "7 eme"
+        }
+        },
+        "enseignant": {
+          "id":"2",
+          "username":"hanaayedi",
+          "password":"hana123",
+          "role":["Enseignant"],
+          "email" : "hana@gmail.com"
+        }
+      }
+    ],
+    "demandes":[
+      {
+        "id":"1",
+        "path":"https://www.ecam.fr/wp-content/uploads/sites/3/2016/06/Exemple-fichier-PDF-1.pdf",
+        "etat":"pas encore",
+        "affectation":{
+          "id":"1",
+          "matiere" : {
+            "id":"1",
+            "nom":"Mathematiques",
+            "niveau": {
+              "id": "1",
+              "niveau": "7 eme"
+            }
+          },
+          "groupe":{
+            "id":"1",
           "nom":"A",
           "nbEtudiants":24,
-          "niveau":{
+          "niveau": {
             "id": "1",
             "niveau": "7 eme"
+          }
+          },
+          "enseignant": {
+            "id":"2",
+            "username":"hanaayedi",
+            "password":"hana123",
+            "role":["Enseignant"],
+            "email" : "hana@gmail.com"
           }
         }
       }

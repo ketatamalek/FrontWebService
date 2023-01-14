@@ -12,38 +12,39 @@
           <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> ID </th>
           <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
-      <ng-container matColumnDef="Date">
-          <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;">  Date  </th>
-          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
-      </ng-container>
-    <ng-container matColumnDef="Heure">
-      <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;">  Heure  </th>
-      <td mat-cell *matCellDef="let element"> {{element.heure}} </td>
+      <ng-container matColumnDef="Path">
+        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> FICHIER </th>
+        <td mat-cell *matCellDef="let element">
+            <a href={{element.path}} >
+                <mat-icon aria-hidden="false" aria-label="Example home icon">picture_as_pdf</mat-icon>
+            </a>
+        </td>
     </ng-container>
+  
     <ng-container matColumnDef="Nombre de copies">
-        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> Nombre de copies </th>
-        <td mat-cell *matCellDef="let element"> {{element.nbCopies}} </td>
+        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> NOMBRE DE COPIES </th>
+        <td mat-cell *matCellDef="let element"> {{element.affectation.groupe.nbEtudiants}} </td>
     </ng-container>
     <ng-container matColumnDef="Enseignant">
-      <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> Enseignant </th>
-      <td mat-cell *matCellDef="let element"> {{element.enseignant.nom}} {{element.enseignant.prenom}} </td>
+      <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> ENSEINGNANT </th>
+      <td mat-cell *matCellDef="let element"> {{element.affectation.enseignant.username}} </td>
   </ng-container>
      
     <ng-container matColumnDef="Matiere" >
-        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> Matiere </th>
-        <td mat-cell *matCellDef="let element"> {{element.matiere.nom}} </td>
+        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> MATIERE </th>
+        <td mat-cell *matCellDef="let element"> {{element.affectation.matiere.nom}} </td>
     </ng-container>
     <ng-container matColumnDef="Groupe" >
-        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> Groupe </th>
-        <td mat-cell *matCellDef="let element"> {{element.groupe.nom}} </td>
+        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> GROUPE </th>
+        <td mat-cell *matCellDef="let element"> {{element.affectation.groupe.nom}} </td>
     </ng-container>
     <ng-container matColumnDef="Etat" >
-        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> Etat </th>
-        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> ETAT </th>
+        <td mat-cell *matCellDef="let element"> {{element.etat}} </td>
     </ng-container>
   
       <ng-container matColumnDef="action">
-          <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> action </th>
+          <th mat-header-cell *matHeaderCellDef  style="color:#112B3C;font-size:15px;"> ACTION </th>
           <td mat-cell *matCellDef="let element">
               <button mat-icon-button routerLink="{{element.id}}/edit" style="color: darkcyan" [disabled]="checkStatus(element.status)"><mat-icon>edit</mat-icon> </button>
               <button mat-icon-button (click)="OnRemove(element.id)" [disabled]="checkStatus(element.status)"><mat-icon color="warn">delete</mat-icon></button>
